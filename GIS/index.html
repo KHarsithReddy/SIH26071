@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIH26071 - Flood Risk GIS</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>SIH26071</h1>
+            <p>Heavy Rainfall & Flood Risk GIS</p>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            GIS Monitoring
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="map-section">
+
+            <div class="map-header">
+                <div>
+                    <h2>Flood Risk Map</h2>
+                    <p>
+                        State-level visualization of predicted flood risk
+                    </p>
+                </div>
+
+                <div class="map-info">
+                    <span id="selectedState">
+                        Select a state
+                    </span>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+        </section>
+
+        <aside class="sidebar">
+
+            <h2>Risk Legend</h2>
+
+            <div class="legend-item">
+                <span class="legend-color low"></span>
+                <span>Low Risk</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-color moderate"></span>
+                <span>Moderate Risk</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-color high"></span>
+                <span>High Risk</span>
+            </div>
+
+            <hr>
+
+            <h2>Selected State</h2>
+
+            <div id="stateDetails">
+                <p>Click a state on the map.</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Leaflet JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <!-- Our JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
